@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Cor de fundo mais escura */
+    color: #fff; /* Cor do texto mais clara */
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    margin: 20px;
+}
+
+#questionario {
+    background-color: #2c2c2c; /* Cor de fundo mais escura */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#questionario h2 {
+    color: #fff;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #fff;
+}
+
+#barra-pesquisa {
+    width: 30%; /* Ajuste a largura conforme necessário */
+    padding: 8px; /* Ajuste o espaçamento interno conforme necessário */
+    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    border: 1px solid #555; /* Cor da borda mais escura */
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categoria {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin: 20px;
+    overflow-x: auto; /* Adição para permitir rolagem lateral */
+}
+
+.grid {
+    display: flex;
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
+    gap: 10px;
+    width: max-content; /* Ajuste conforme necessário */
+    padding-bottom: 10px; /* Adição para garantir espaço suficiente para rolagem lateral */
+}
+
+.item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 200px; /* Largura fixa para cada item, ajuste conforme necessário */
+}
+
+/* Adicione uma barra de rolagem lateral apenas quando necessário */
+@media (max-width: 1000px) {
+    .grid {
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    margin: 0;
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+}
+
+/* Adições para o detalhes */
+#detalhes {
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    background-color: #2c2c2c; /* Cor de fundo mais escura */
+    color: #fff; /* Cor do texto mais clara */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#detalhes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#detalhes th, #detalhes td {
+    border: 1px solid #555; /* Cor da borda mais escura */
+    padding: 10px;
+    text-align: left;
+}
+
+#detalhes th {
+    background-color: #333;
+    color: #fff;
+}
+
+#detalhes p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#detalhes p::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #555; /* Cor da borda mais escura */
+    margin-top: 5px;
+}

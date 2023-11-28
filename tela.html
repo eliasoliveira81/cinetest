@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonte.css">
+    <style>
+        /* Adicione estas classes para estilização */
+        .item {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item:hover {
+            transform: scale(1.1);
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <title>CineSugestões</title>
+</head>
+<body>
+    <header>
+        <h1>CineSugestões</h1>
+        <p>Bem-vindo ao seu guia personalizado de filmes, séries e animes!</p>
+    </header>
+
+    <section id="pesquisa">
+        <input type="text" id="barra-pesquisa" placeholder="Pesquisar...">
+        <button type="button" id="Enter" onclick="realizarPesquisa()">Pesquisar</button>
+
+    </section>
+
+    <section id="conteudo">
+        <div id="filmes" class="categoria">
+            <h2>Filmes</h2>
+            <div class="grid" id="grid-filmes">
+                <div class="item" onclick="mostrarDetalhes('007')">
+                    <img src="th (1).jpeg" alt="007">
+                    <h3>007</h3>
+                </div>
+                <div class="item" onclick="mostrarDetalhes('Filme1')">
+                    <img src="VbgpQ.png" alt="Filme1">
+                    <h3>Filme1</h3>                
+                </div>
+                <div class="item" onclick="mostrarDetalhes('Filme2')">
+                    <img src="VbgpQ.png" alt="Filme2">
+                    <h3>Filme2</h3>
+                </div>
+                <!-- Adicione mais filmes aqui -->
+            </div>
+        </div>
+
+        <div id="series" class="categoria">
+            <h2>Séries</h2>
+            <div class="grid" id="grid-series">
+                <div class="item" onclick="mostrarDetalhes('The 100')">
+                    <img src="th (2).jpeg" alt="The 100">
+                    <h3>The 100</h3>
+                </div>
+                <div class="item" onclick="mostrarDetalhes('Serie1')">
+                    <img src="VbgpQ.png" alt="Serie1">
+                    <h3>Serie1</h3>
+                </div>
+                <div class="item" onclick="mostrarDetalhes('Serie2')">
+                    <img src="VbgpQ.png" alt="Serie2">
+                    <h3>Serie2</h3>
+                </div>
+                <!-- Adicione mais séries aqui -->
+            </div>
+        </div>
+
+        <div id="animes" class="categoria">
+            <h2>Animes</h2>
+            <div class="grid" id="grid-animes">
+                <div class="item" onclick="mostrarDetalhes('Konosuba')">
+                    <img src="th.jpeg" alt="Konosuba">
+                    <h3>Konosuba</h3>
+                </div>
+                <div class="item" onclick="mostrarDetalhes('Anime1')">
+                    <img src="VbgpQ.png" alt="Anime1">
+                    <h3>Anime1</h3>
+                </div>
+                <div class="item" onclick="mostrarDetalhes('Anime2')">
+                    <img src="VbgpQ.png" alt="Anime2">
+                    <h3>Anime2</h3>
+                </div>
+                <!-- Adicione mais animes aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section para mostrar os detalhes -->
+    <section id="detalhes"></section>
+
+    <footer>
+        <p>&copy; 2023 CineSugestões. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+</html>
+
+
