@@ -1,3 +1,18 @@
+.item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;

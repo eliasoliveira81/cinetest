@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,20 +21,53 @@
             max-width: 100%;
             height: auto;
         }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav input {
+    margin-right: 10px;
+}
+        nav #barra-pesquisa {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    padding: 8px; /* Adicione algum preenchimento para melhorar a aparência */
+}
+
+
+        nav button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
     </style>
     <title>CineSugestões</title>
 </head>
+
 <body>
     <header>
         <h1>CineSugestões</h1>
-        <p>Bem-vindo ao seu guia personalizado de filmes, séries e animes!</p>
+        <nav>
+            <input type="text" id="barra-pesquisa" placeholder="Pesquisar...">
+            <button type="button" id="Enter" onclick="realizarPesquisa()">Pesquisar</button>
+        </nav>
     </header>
-
-    <section id="pesquisa">
-        <input type="text" id="barra-pesquisa" placeholder="Pesquisar...">
-        <button type="button" id="Enter" onclick="realizarPesquisa()">Pesquisar</button>
-
-    </section>
 
     <section id="conteudo">
         <div id="filmes" class="categoria">
@@ -103,6 +137,5 @@
 
     <script src="tema.js"></script>
 </body>
+
 </html>
-
-

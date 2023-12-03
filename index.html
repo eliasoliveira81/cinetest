@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login CineSugestões</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Ajuste para centralizar verticalmente */
+            height: 100vh;
+            background-color: #333; /* Cor de fundo preto mais claro */
+            color: #fff; /* Cor do texto principal */
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-box,
+        .signup-box {
+            background-color: #222; /* Cor de fundo interno mais escuro */
+            border-radius: 6px;
+            box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), 0 4px 8px rgba(149, 157, 165, 0.2);
+            padding: 24px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 16px;
+            font-size: 20px;
+            color: #fff; /* Cor do título */
+        }
+
+        h2 a {
+            color: #007bff; /* Cor dos links no título */
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 14px; /* Ajuste para o mesmo tamanho dos outros links */
+        }
+
+        h2 a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff; /* Cor das labels */
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #d1d5da;
+            border-radius: 3px;
+            background-color: #fff; /* Cor do fundo dos inputs */
+            color: #333; /* Cor do texto dos inputs */
+        }
+
+        input[type="submit"],
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+        }
+
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #218838;
+        }
+
+        a {
+            color: #007bff; /* Azul */
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 14px; /* Ajuste para o mesmo tamanho dos outros links */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center; /* Ajuste para centralizar os links verticalmente */
+        }
+
+        .footer-links a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Faça login no CineSugestões</h2>
+            <div>
+                <a href="https://www.facebook.com/" style="color: #007bff;">Facebook</a>
+                <a href="https://web.whatsapp.com/" style="color: #007bff;">WhatsApp</a>
+                <a href="https://github.com/" style="color: #007bff;">GitHub</a>
+            </div>
+            <form class="login-form" id="loginForm" onsubmit="logar(); return false;">
+                <label for="username">Nome de usuário ou endereço de e-mail</label>
+                <input type="text" id="login" name="username" required>
+                <label for="password">Senha <a href="Esqueceusenha.html">Esqueceu a senha?</a></label>
+                <input type="password" id="senha" name="password" required>
+                <input type="submit" value="Entrar">
+            </form>
+            <p>Novo no Cine? <a href="crieumaconta.html" onclick="showSignUpForm()">Crie uma conta.</a></p>
+        </div>
+
+        <div class="footer-links">
+            <a href="termos.html">Termos</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a href="privacidade.html">Privacidade</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a href="Documentos.html">Documentos</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a href="suporte.html">Entre em contato com o suporte do Cine</a>
+        </div>
+    </div>
+
+
+    <script>
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login === "admin" && senha === "admin") {
+                alert('Sucesso');
+                location.href = "tela.html";
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        function showSignUpForm() {
+            document.getElementById('loginBox').style.display = 'none';
+            document.getElementById('signupBox').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('signupBox').style.display = 'none';
+            document.getElementById('loginBox').style.display = 'block';
+        }
+
+        function registerUser() {
+            // Implementar lógica de registro aqui
+            alert('Usuário registrado com sucesso!');
+        }
+    </script>
+</body>
+
+</html>

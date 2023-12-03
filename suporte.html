@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato com o Suporte do Cine</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #333;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-to-home {
+            margin-top: 20px;
+        }
+
+        .success-message {
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Entre em Contato com o Suporte do Cine</h1>
+    <p>Use o formulário abaixo para entrar em contato conosco. Estamos aqui para ajudar!</p>
+
+    <form id="contactForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="button" onclick="enviarMensagem()">Enviar Mensagem</button>
+    </form>
+
+    <div class="success-message" id="successMessage"></div>
+
+    <div class="back-to-home">
+        <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </div>
+
+    <script>
+        function enviarMensagem() {
+            // Lógica de envio da mensagem aqui (pode ser simulada)
+            // Aqui, vamos apenas exibir a mensagem de sucesso após um breve atraso
+            setTimeout(function () {
+                document.getElementById('contactForm').reset(); // Limpar o formulário
+                document.getElementById('successMessage').innerText = 'Enviado com sucesso!';
+            }, 1000); // Atraso de 1 segundo (simulando o envio)
+        }
+    </script>
+</body>
+
+</html>
